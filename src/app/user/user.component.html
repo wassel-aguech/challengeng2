@@ -1,0 +1,59 @@
+<h1 style="text-align: center ;">page user</h1>
+
+
+
+<table>
+    <tr>
+        <th>index </th>
+        <th>liste hobbies</th>
+    </tr>
+    <tr *ngFor="let hobi of user.hobbies ,index as i ">
+        <td>
+            {{i}} 
+        </td>
+        <td>
+            {{hobi}}
+        </td>
+    </tr>
+    
+</table>
+
+
+<br>
+<hr>
+<div [style.display]="hobidisplay" *ngFor="let hobi of user.hobbies ,index as i "> {{i}} {{hobi}} </div>
+
+<button (click)="showhobbi()">{{text}}</button>
+
+
+<br>
+<hr>
+
+
+<table>
+    <tr>
+        <th>index </th>
+        <th>liste hobbies</th>
+        <th>Acton</th>
+    </tr>
+    <tr *ngFor="let hobi of user.hobbies ,index as i ">
+        <td>
+            {{i}} 
+        </td>
+        <td>
+            {{hobi}}
+        </td>
+        <td>
+            <button (click)="suprimer(i)">suprimer</button>
+        </td>
+    </tr>
+    
+</table>
+
+<br>
+<hr>
+
+<input type="text" [(ngModel)]="userName">
+{{userName}}
+
+

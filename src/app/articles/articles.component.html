@@ -1,0 +1,30 @@
+<h1 style="text-align: center ; color:crimson"> {{titre}} </h1>
+
+
+<table style="text-align: center; width: 80%;">
+    <tr>
+        <th>id</th>
+        <th>titre</th>
+        <th>contenue</th>
+        <th>auteur</th>
+        <th>date</th>
+    </tr>
+    <tr *ngFor="let item of listeArticles , index as i">
+        <td> {{i}} </td>
+        <td> {{item.titre}} </td>
+        <td> {{item.contenu}} </td>
+        <td> {{item.auteur}} </td>
+        <td> {{item.date}} </td>
+    </tr>
+</table>
+
+<hr>
+<h1 style="text-align: center ; color:crimson">les articles du jours</h1>
+<div *ngFor="let item of listeArticles">
+    <div style="border: 2px solid blue; background-color: gray; text-align: center; width: 30%; margin: auto; margin-bottom: 10px;border-radius: 10px;">
+        <h1> {{item.titre}} </h1>
+        <h2 style="color:red"> Contenu :  {{item.contenu}} </h2>
+        <h3>Auteur :  {{item.auteur}} </h3>
+        <h4>Date :  {{item.date}} </h4>
+    </div>
+</div>
